@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Mi Super Applicacion</title>
+        <script>
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    document.getElementById("name").innerHTML = xmlHttp.responseText;
+            }
+            xmlHttp.open("GET", '/usuarios', true);
+            xmlHttp.send(null);
+        </script>
+    </head>
+    <body>
+        <a href="/daleboca">Boca</a>
+        <a href="/daleriver">River</a>
+        <div id="name"></div>
+    </body>
+</html>

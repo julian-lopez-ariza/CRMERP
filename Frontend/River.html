@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>River</title>
+        <script>
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                    document.getElementById("name").innerHTML = xmlHttp.responseText;
+            }
+            xmlHttp.open("GET", '/usuarios-river', true);
+            xmlHttp.send(null);
+        </script>
+    </head>
+    <body>
+        <a href="/">Todos</a>
+        <div id="name"></div>
+    </body>
+</html>

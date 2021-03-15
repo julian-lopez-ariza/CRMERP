@@ -1,0 +1,4 @@
+mongo/log/*
+mongo/data/*
+*/node_modules/*
+*/package-lock.json
