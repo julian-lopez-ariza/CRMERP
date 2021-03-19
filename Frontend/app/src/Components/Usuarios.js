@@ -1,12 +1,15 @@
-import {Component} from 'react'
+import {Component} from 'react';
+import './ListaFinalDeusuarios';
+import ListaFinalDeUsuarios from './ListaFinalDeusuarios';
 
 class Usuarios extends Component{
 
     constructor (props) {
         super(props);
-        this.state = { arreglo: [], boca: [], river: [], EquipoSeleccionado: '' };
+        this.state = { arreglo: [] };
         this.selectBoca = this.selectBoca.bind(this);
         this.selectRiver = this.selectRiver.bind(this);
+        this.selectTodos = this.selectTodos.bind(this);
     }
 
     componentDidMount(){
@@ -14,11 +17,7 @@ class Usuarios extends Component{
             .then((res) => res.json())
             .then(
                 (res) =>{ 
-                    this.setState({ 
-                        arreglo : res, 
-                        boca : res.filter((item) => { return item.Equipo == 'Boca'}),
-                        river : res.filter((item) => { return item.Equipo == 'River'})
-                    });
+                    this.setState({ arreglo : res });
                 },
                 (err) => {
                     console.error("EROR:", err);
@@ -27,42 +26,54 @@ class Usuarios extends Component{
     }
 
     selectBoca(){
-        this.setState({EquipoSeleccionado : 'Boca'})
+        fetch("http://localhost:8080/usuarios-boca")
+            .then((res) => res.json())
+            .then(
+                (res) =>{ 
+                    this.setState({ arreglo : res });
+                },
+                (err) => {
+                    console.error("EROR:", err);
+                }
+            );
     }
 
     selectRiver(){
-        this.setState({EquipoSeleccionado : 'River'})
+        fetch("http://localhost:8080/usuarios-river")
+            .then((res) => res.json())
+            .then(
+                (res) =>{ 
+                    this.setState({ arreglo : res });
+                },
+                (err) => {
+                    console.error("EROR:", err);
+                }
+            );
+    }
+
+    selectTodos(){
+        fetch("http://localhost:8080/usuarios")
+            .then((res) => res.json())
+            .then(
+                (res) =>{ 
+                    this.setState({ arreglo : res });
+                },
+                (err) => {
+                    console.error("EROR:", err);
+                }
+            );
     }
 
     render() {
-        let lista;
-        if (this.state.EquipoSeleccionado == 'Boca')
-        {
-            lista = this.state.boca.map((item) => 
-                        <li>{item.Nombre}, {item.Apellido}</li>
-                    )
-        }
-        else if( this.state.EquipoSeleccionado == 'River')
-        {
-            lista = this.state.river.map((item) => 
-                        <li>{item.Nombre}, {item.Apellido}</li>
-                    )
-        }
-        else {
-            lista = this.state.arreglo.map((item) => 
-                        <li>{item.Nombre}, {item.Apellido}</li>
-                    )
-        }
 
         return (
             <div>
                 <div>
                     <input type="button" value="Boca" onClick={this.selectBoca}/>
                     <input type="button" value="River" onClick={this.selectRiver}/>
+                    <input type="button" value="Todos" onClick={this.selectTodos} />
                 </div>
-                <ul>
-                    { lista }
-                </ul>
+                <ListaFinalDeUsuarios ahitevan={this.state.arreglo} />
             </div>
         )
     };
