@@ -4,8 +4,8 @@ module.exports = function(app){
 
     function search(req, res, filter){
         usuario.find(filter,function(err, people) {
-            var nameonly = people.map((ori) => ori.Nombre);
-            res.send(nameonly.join('</br>'));
+            res.header("Access-Control-Allow-Origin", "*");            
+            res.send(people);
         });
     }
 
