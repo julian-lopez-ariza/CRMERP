@@ -1,7 +1,7 @@
 import {Component} from 'react';
 import './ListaFinalDeusuarios';
 import ListaFinalDeUsuarios from './ListaFinalDeusuarios';
-import Flexbox from 'flexbox-react';
+import { Button } from "@material-ui/core";
 
 class Usuarios extends Component{
 
@@ -68,14 +68,15 @@ class Usuarios extends Component{
     render() {
 
         return (
-            <Flexbox element="div" width="100%">
+            <div style={{ width: '100%' }}>
                 <div>
                     <input type="button" value="Boca" onClick={this.selectBoca}/>
                     <input type="button" value="River" onClick={this.selectRiver}/>
                     <input type="button" value="Todos" onClick={this.selectTodos} />
                 </div>
                 <ListaFinalDeUsuarios ahitevan={this.state.arreglo} />
-            </Flexbox>
+                <Button variant="contained" color="primary">Button</Button>
+            </div>
         )
     };
 }
