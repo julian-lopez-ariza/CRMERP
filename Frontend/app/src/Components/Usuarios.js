@@ -2,6 +2,11 @@ import {Component} from 'react';
 import './ListaFinalDeusuarios';
 import ListaFinalDeUsuarios from './ListaFinalDeusuarios';
 import { Button } from "@material-ui/core";
+import Switch from '@material-ui/core/Switch';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
+
+
 
 class Usuarios extends Component{
 
@@ -76,9 +81,26 @@ class Usuarios extends Component{
                 </div>
                 <ListaFinalDeUsuarios ahitevan={this.state.arreglo} />
                 <Button variant="contained" color="primary">Button</Button>
+               
+                <FormControlLabel
+                    control={
+                        <Switch
+                            onChange={this.llamada}
+                            color="primary"
+                            name="checkedA"
+                            inputProps={{ 'aria-label': 'secondary checkbox' }}
+                            
+                        />
+                        
+                    }
+                    label="este es un texto"
+                />
             </div>
         )
     };
+    llamada(event,nuevoEstado){
+        console.log('##',nuevoEstado)
+    }
 }
 
 export default Usuarios;
