@@ -13,18 +13,6 @@ function Usuarios()
         }
     );
 
-    function selectBoca(){
-        ReusarSelect("usuarios-boca");
-    };
-
-    function selectRiver(){
-        ReusarSelect("usuarios-river");
-    };
-
-    function selectTodos(){
-        ReusarSelect("usuarios");
-    };
-
     function ReusarSelect(filtro){
         fetch("http://localhost:8080/"+filtro)
             .then((res) => res.json())
@@ -41,9 +29,9 @@ function Usuarios()
     return (
         <div style={{ width: '100%' }}>
             <div>
-                <input type="button" value="Boca" onClick={selectBoca}/>
-                <input type="button" value="River" onClick={selectRiver}/>
-                <input type="button" value="Todos" onClick={selectTodos} />
+                <input type="button" value="Boca" onClick={reusarSelect('usuarios-boca')}/>
+                <input type="button" value="River" onClick={reusarSelect('usuarios-river')}/>
+                <input type="button" value="Todos" onClick={reusarSelect('usuarios')} />
             </div>
             <ul>
                 { 
