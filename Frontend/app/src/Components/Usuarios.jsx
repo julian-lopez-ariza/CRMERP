@@ -6,12 +6,10 @@ function Usuarios()
 {
     const [usuarios, setUsuarios] = useState([]);
 
-    useEffect(
-        function () {   
-            if (usuarios == [])
-                selectTodos();
-        }
-    );
+    useEffect(() =>{
+        todos();
+    },
+    []);
 
     function ReusarSelect(filtro){
         fetch("http://localhost:8080/"+filtro)
@@ -26,12 +24,24 @@ function Usuarios()
             );
     }
 
+    function boca(){
+        ReusarSelect('usuarios-boca');
+    }
+
+    function river(){
+        ReusarSelect('usuarios-river');
+    }
+
+    function todos(){
+        ReusarSelect('usuarios');
+    }
+
     return (
         <div style={{ width: '100%' }}>
             <div>
-                <input type="button" value="Boca" onClick={reusarSelect('usuarios-boca')}/>
-                <input type="button" value="River" onClick={reusarSelect('usuarios-river')}/>
-                <input type="button" value="Todos" onClick={reusarSelect('usuarios')} />
+                <input type="button" value="Boca" onClick={boca}/>
+                <input type="button" value="River" onClick={river}/>
+                <input type="button" value="Todos" onClick={todos} />
             </div>
             <ul>
                 { 
