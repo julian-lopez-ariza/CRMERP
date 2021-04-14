@@ -73,11 +73,8 @@ export default function Clientes() {
           agregar
         </Button>
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-          <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+          <DialogTitle id="form-dialog-title">Nuevo cliente</DialogTitle>
           <DialogContent>
-            <DialogContentText>
-              para subscribir llenar datos
-            </DialogContentText>
             <TextField
               autoFocus
               margin="dense"
@@ -89,7 +86,7 @@ export default function Clientes() {
             <TextField              
               margin="dense"
               id="name"
-              label="Contacto"
+              label="Contacto email"
               type="email"
               fullWidth/>
           </DialogContent>
