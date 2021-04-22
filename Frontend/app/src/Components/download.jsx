@@ -11,16 +11,17 @@ import Avatar from '@material-ui/core/Avatar';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 290,
+    
   },
   media: {
     
-    minWidth: 280,
+    minWidth: 300,
 
     display:'fullwidth',
     
-    height: 170,
+    height: 300,
 
-    paddingTop: '50.25%', // 16:9
+    //paddingTop: '50.25%', // 16:9
   },
 
 }));
@@ -35,13 +36,11 @@ export default function download () {
   return (
     <div>
       <Card className={classes.root} >
-          <Avatar alt="julian" src="./imagenes/julian.jpg" className={classes.media} />
+          <Avatar alt="julian" src="./assets/julian.jpg" className={classes.media} />
         
           <Typography variant="body1" color="primary" component="p">
-              <h3>Julian Ezequiel Lopez Ariza</h3>
+              <h3>Julian Lopez </h3>
           </Typography>
-          <CardActions disableSpacing>
-          </CardActions>
           <Button variant="outlined" color="primary" fullWidth>
               Download
           </Button>
