@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -13,7 +13,6 @@ const useStyles = makeStyles({
       
     }, 
   });
-
 
 function CircularProgressWithLabel(props) {
 return (
@@ -46,13 +45,8 @@ value: PropTypes.number.isRequired,
 
 };
 
-
-
-
-function porcentaje () {
-    const classes = useStyles();
-   
-        
+export default function porcentaje () {
+    const classes = useStyles();       
     return (
         <div>
             <Grid container item xs={12} className={classes.title}>
@@ -80,5 +74,3 @@ function porcentaje () {
         </div>
     )
 }
-export default porcentaje ;
-

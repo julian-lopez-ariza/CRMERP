@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types';
@@ -28,39 +28,34 @@ function LinearProgressWithLabel(props) {
     value: PropTypes.number.isRequired,
   };
   
+export default function porcentaje () {
   
-  
-  
-  export default class porcentaje extends Component {
-      render() {
-          return (
-              <div>
-                    <Grid container item xs={12} >
-                        <Grid item xs={12}>
-                            <Typography>
-                                HTLM + css + js
-                            </Typography>
-                            <LinearProgressWithLabel value={90} />
-                            
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Typography>
-                                Git
-                            </Typography>
-                            <LinearProgressWithLabel value={80} />
-                            
-                        </Grid>                      
-                        <Grid item xs={12}>
-                        <Card >
-                            <Typography>
-                                Angular
-                            </Typography>
-                            <LinearProgressWithLabel value={55} />
-                        </Card>
-                        </Grid>               
-                    </Grid>    
-              </div>
-          )
-      }
-  }
-  
+  return (
+    <div>
+      <Grid container item xs={12} >
+          <Grid item xs={12}>
+              <Typography>
+                  HTLM + css + js
+              </Typography>
+              <LinearProgressWithLabel value={90} />
+              
+          </Grid>
+          <Grid item xs={12}>
+              <Typography>
+                  Git
+              </Typography>
+              <LinearProgressWithLabel value={80} />
+              
+          </Grid>                      
+          <Grid item xs={12}>
+          <Card >
+              <Typography>
+                  Angular
+              </Typography>
+              <LinearProgressWithLabel value={55} />
+          </Card>
+          </Grid>               
+      </Grid>    
+    </div>
+  )
+}

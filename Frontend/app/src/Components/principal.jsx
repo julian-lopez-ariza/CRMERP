@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Download from './download';
 import Informacion from './Informacion';
 import Grid from '@material-ui/core/Grid';
@@ -16,12 +16,10 @@ const useStyles = makeStyles((theme) => ({
       },
       
 }));
-function  principal () {
-    const classes = useStyles();
 
-    return (
-    
-       
+export default function  principal () {
+    const classes = useStyles();
+    return (       
         <Grid container item xs= {12}>
             
             <Grid item xs= {4}> 
@@ -35,10 +33,6 @@ function  principal () {
                     <Informacion />
                 </Card>                   
             </Grid>  
-        </Grid>
-   
-    
-    )
-   
+        </Grid>    
+    )   
 }
-export default principal ;

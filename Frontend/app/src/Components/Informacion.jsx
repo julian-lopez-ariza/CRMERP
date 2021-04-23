@@ -9,15 +9,10 @@ import { Divider } from '@material-ui/core';
 import Contacto from './contacto';
 
 const useStyles = makeStyles({
-
-    
   title: {
     fontSize: 50,
     margin:'0px 0px 0px 250px ',
-  },
-   
- 
-  
+  },  
 });
 
 export default function Informacion() {
@@ -80,15 +75,11 @@ export default function Informacion() {
             <Contacto />
             <Divider />
             <br/>
-            <br/>
-            
-            <Porcentaje />
-      
-          </CardContent>
-          
+            <br/>            
+            <Porcentaje />      
+          </CardContent>          
         </Card>
       </Grid>  
     </Grid>
-
   );
 }
