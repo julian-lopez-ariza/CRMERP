@@ -6,9 +6,7 @@ import {Icon} from '@material-ui/core';
 
 
 
-export default function redesSociales () {
-
-  
+export default function redesSociales () {  
     return (
         <div>
             <Grid container  item xs= {12}>

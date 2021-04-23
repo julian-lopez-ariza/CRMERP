@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Grid, Typography,Box} from '@material-ui/core';
 import PropTypes from 'prop-types';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -45,25 +45,20 @@ return (
               relacion de dependencia: disponible.
               <br/>
               fulltime: disponible.
-
           </Typography>  
-      </Grid>
-      
-      
+      </Grid>            
       <Grid item xs={5}>
           <Grid item xs={12}>
               <Typography>
                   Github
               </Typography>
-              <LinearProgressWithLabel value={90} />
-              
+              <LinearProgressWithLabel value={90} />              
           </Grid>
           <Grid item xs={12}>
-              <Typography>
-                  TFS
-              </Typography>
-              <LinearProgressWithLabel value={80} />
-              
+            <Typography>
+                TFS
+            </Typography>
+            <LinearProgressWithLabel value={80} />
           </Grid>                      
           <Grid item xs={12}>
           <Box width="100%" mr={3}>
@@ -74,8 +69,6 @@ return (
           </Box>
           </Grid>               
       </Grid>
-  </Grid>
-            
-        )
-    
+  </Grid>         
+  )    
 }
