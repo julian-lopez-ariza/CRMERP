@@ -5,14 +5,15 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
-import { lightGreen } from '@material-ui/core/colors';
 import {Icon} from '@material-ui/core';
+import RedesSociales from './redesSociales';
 
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 350,
+    backgroundColor: 'brown',
 
   },
   media: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     height: 500,
   },
   por:{
-    margin:'0px 0px 0px 150px',
+    margin:'0px 0px 0px 130px',
   },
   margen:{
     margin:'0px 10px 0px 10px',
@@ -34,8 +35,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function download () {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-  
   
   
 
@@ -51,6 +50,9 @@ export default function download () {
                 <h3>Julian Lopez </h3>
             </Typography>
           </Grid> 
+          <Grid  item xs= {12}>
+            <RedesSociales /> 
+          </Grid>  
           <Grid  item xs= {12}>
             <Button variant="contained" color="primary" fullWidth  >
                 <Icon className={classes.margen} >
