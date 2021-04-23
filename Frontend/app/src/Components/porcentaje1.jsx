@@ -2,21 +2,21 @@ import React, { Component } from 'react'
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 import PropTypes from 'prop-types';
-import Box from '@material-ui/core/Box';
+import Card from '@material-ui/core/Card';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 function LinearProgressWithLabel(props) {
     return (
-      <Box display="flex" alignItems="center">
-        <Box width="100%" mr={1}>
+      <Card display="flex" alignItems="center">
+        <Card width="100%" mr={1}>
           <LinearProgress variant="determinate" {...props} />
-        </Box>
-        <Box minWidth={35}>
+        </Card>
+        <Card minWidth={35}>
           <Typography variant="body2" color="textSecondary">{`${Math.round(
             props.value,
           )}%`}</Typography>
-        </Box>
-      </Box>
+        </Card>
+      </Card>
     );
   }
   
@@ -51,12 +51,12 @@ function LinearProgressWithLabel(props) {
                             
                         </Grid>                      
                         <Grid item xs={12}>
-                        <Box width="100%" mr={3}>
+                        <Card >
                             <Typography>
                                 Angular
                             </Typography>
                             <LinearProgressWithLabel value={55} />
-                        </Box>
+                        </Card>
                         </Grid>               
                     </Grid>    
               </div>
