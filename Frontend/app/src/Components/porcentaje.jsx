@@ -9,8 +9,7 @@ import Porcentaje2 from './porcentaje2';
 export default function porcentaje () {
       
     return (
-        <div> 
-            
+        <div>             
             <Grid container item xs={12} >
                 
                 <Grid item xs={6}>
