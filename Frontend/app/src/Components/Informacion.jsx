@@ -9,14 +9,11 @@ import { Divider } from '@material-ui/core';
 import Contacto from './contacto';
 
 const useStyles = makeStyles({
-  root: {
-    display: 'block',
-    transform: 'scale(0.8)',
-  
-  }, 
+
     
   title: {
     fontSize: 50,
+    margin:'0px 0px 0px 250px ',
   },
    
  
@@ -27,20 +24,22 @@ export default function Informacion() {
   const classes = useStyles();
 
   return (
-    <Grid container  item xs= {12}>
+    <Grid container item xs={12}>
       <Grid item xs={12}>
-        <Card className={classes.root}  variant="outlined" >
+        <Card   variant="outlined" >
           <CardContent>
-            <Typography className={classes.title} color="black" gutterBottom >
-                hola, soy julian!
+            <Typography className={classes.title} color="black"  >
+                Curriculum vitae
             </Typography>
-            <Typography variant="h5" component="h2">
-              
             
+            <Typography variant="h5" component="h2">
+              hola, soy julian!
             </Typography>
+            
             <Typography className={classes.pos} color="black">
             <h1>Conocimientos </h1> 
             </Typography>
+            
             <Typography variant="body1" component="p">
               Estudiante de Lic. Sistemas de la UNLP.
               <br/>

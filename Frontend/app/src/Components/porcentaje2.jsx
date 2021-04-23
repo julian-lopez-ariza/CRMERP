@@ -4,7 +4,17 @@ import Grid from '@material-ui/core/Grid'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import PropTypes from 'prop-types';
 import Box from '@material-ui/core/Box';
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles({
+        
+    title: {
+      margin:'55px 0px 0px 40px ',
+      
+    },
+     
+     
+  });
 
 
 function CircularProgressWithLabel(props) {
@@ -41,35 +51,36 @@ value: PropTypes.number.isRequired,
 
 
 
-export default class porcentaje extends Component {
-    
-    render() {
+function porcentaje () {
+    const classes = useStyles();
+   
         
-        return (
-            <div>
-                <Grid container item xs={12} >
-                    
-                    <Grid item xs={4}>
-                        <CircularProgressWithLabel value={90}  />
-                        <Typography>
-                            material-ui
-                        </Typography>
-                    </Grid>                      
-                    <Grid item xs={4}>
-                        <CircularProgressWithLabel value={55} />
-                        <Typography>
-                            ingles
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <CircularProgressWithLabel value={85}   />
-                        <Typography>
-                            reactjs
-                        </Typography>
+    return (
+        <div>
+            <Grid container item xs={12} className={classes.title}>
+                
+                <Grid item xs={4}>
+                    <CircularProgressWithLabel value={90}  />
+                    <Typography>
+                        material-ui
+                    </Typography>
+                </Grid>                      
+                <Grid item xs={4}>
+                    <CircularProgressWithLabel value={55} />
+                    <Typography>
+                        ingles
+                    </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                    <CircularProgressWithLabel value={85}   />
+                    <Typography>
+                        reactjs
+                    </Typography>
 
-                    </Grid>                                            
-                </Grid>    
-            </div>
-        )
-    }
+                </Grid>                                            
+            </Grid>    
+        </div>
+    )
 }
+export default porcentaje ;
+

@@ -31,7 +31,7 @@ export default class contacto extends Component {
         return (
            
             <Grid container item xs ={12}>
-                <Grid item xs={6}>
+                <Grid item xs={7}>
                    <Typography>
                         Nombre completo: Julian Ezequiel Lopez Ariza .
                         <br/>
@@ -51,7 +51,7 @@ export default class contacto extends Component {
                 </Grid>
                 
                 
-                <Grid item xs={6}>
+                <Grid item xs={5}>
                     <Grid item xs={12}>
                         <Typography>
                             Github
