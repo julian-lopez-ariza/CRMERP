@@ -1,20 +1,20 @@
 import React from 'react';
-import { Grid, Typography,Box} from '@material-ui/core';
+import { Grid, Typography,Card} from '@material-ui/core';
 import PropTypes from 'prop-types';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 function LinearProgressWithLabel(props) {
     return (
-      <Box display="flex" alignItems="center">
-        <Box width="100%" mr={1}>
+      <Card display="flex" alignItems="center">
+        <Card width="100%" mr={1}>
           <LinearProgress variant="determinate" {...props} />
-        </Box>
-        <Box minWidth={35}>
+        </Card>
+        <Card minWidth={35}>
           <Typography variant="body2" color="textSecondary">{`${Math.round(
             props.value,
           )}%`}</Typography>
-        </Box>
-      </Box>
+        </Card>
+      </Card>
     );
   }
   
@@ -30,24 +30,16 @@ export default function contacto () {
 return (
     
   <Grid container item xs ={12}>
-      <Grid item xs={7}>
-          <Typography>
-              Nombre completo: Julian Ezequiel Lopez Ariza .
-              <br/>
-              fecha de nacimiento: 30/07/1994   .
-              <br/>
-              email: julilopezariza@gmail.com   .
-              <br/>
-              celular: 0221-5546689      .
-              <br/> 
-              freelance: disponible.
-              <br/>
-              relacion de dependencia: disponible.
-              <br/>
-              fulltime: disponible.
-          </Typography>  
+      <Grid item xs={6}>
+        <li>Nombre completo: Julian Ezequiel Lopez Ariza .</li>          
+        <li> fecha de nacimiento: 30/07/1994.</li>         
+        <li>email: julilopezariza@gmail.com.</li>          
+        <li>celular: 0221-5546689.</li>          
+        <li>freelance: disponible.</li>         
+        <li>relacion de dependencia: disponible.</li>
+        <li>fulltime: disponible.</li>
       </Grid>            
-      <Grid item xs={5}>
+      <Grid item xs={6}>
           <Grid item xs={12}>
               <Typography>
                   Github
@@ -61,12 +53,12 @@ return (
             <LinearProgressWithLabel value={80} />
           </Grid>                      
           <Grid item xs={12}>
-          <Box width="100%" mr={3}>
+          <Card width="100%" mr={3}>
               <Typography>
                   NodeJS
               </Typography>
               <LinearProgressWithLabel value={55} />
-          </Box>
+          </Card>
           </Grid>               
       </Grid>
   </Grid>         
